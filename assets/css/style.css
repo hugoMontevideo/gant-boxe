@@ -1,0 +1,304 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url("../images/background.jpg");
+    background-repeat: repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #232323;
+}
+
+.header-layout{
+    /* display: flex;
+    flex-direction: column; */
+    padding: 1.5em;
+
+}
+
+header .logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a.logo-img{
+    width: 220px;
+}
+.logo-img img{
+    width: 100%;
+}
+.logo p{
+    font-size: 1em;
+}
+.logo p span{
+    color: #e99e00;
+}
+
+.morning p{
+    font-size: 1.1em;
+    margin: 1em 0;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+}
+header nav a{
+    font-size: .9em;
+    text-decoration: none;
+    color: #232323;
+}
+header nav a:hover{
+    color: #e99e00;
+}
+/*  -------------- END HEADER ------------ */
+main{
+    background-color: #202020;
+
+}
+.main-layout{
+    background-color: #f3f3f3;
+    margin: 0 1em;
+    border-top: 1em solid #202020
+}
+.banniere{
+    /* border-top: black solid 15px; */
+    overflow: hidden;
+}
+.banniere img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.articles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    width: 100%;
+}
+.articles article{
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.articles .picture {
+    width: 90%;
+    margin: 0 auto;
+}
+.articles .picture img{
+    width: 100%;
+}
+.articles .solde{
+    background-color: rgba(0, 0, 0, 0.774);
+    color: #e99e00;
+    position: absolute;
+    width: 3.4em;
+    padding: .3em;
+    top: 10px;
+    right: 0px;
+    border-radius: 8px;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.articles .solde.red{
+    right: -18px;
+}
+.articles article h3{
+    position: relative;
+    z-index: 10;
+    bottom: 40px;
+    font-size: .7em;
+    font-weight: 600;
+    width: 100%;
+}
+.infos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -40px 0 2em;
+}
+.infos button{
+    background-color: #232323;
+    color: white;
+    padding: .5em 2.5em;
+    border: none;
+    font-family: Arial;
+    font-size: .8em;
+    margin: 0 1.5em 0 0;
+}
+.infos p{
+    font-size: 1.3em;
+    font-weight: 600;
+    color: orange;
+}
+.infos p span{
+    text-decoration: line-through;
+    color: #646464;
+    margin: 0 .7em 0 0;
+}
+/* 
+img{
+    width: 100%;
+} */
+
+/* ------------ FOOTER ------------- */
+footer{
+    background-color: #373737;
+    padding: 0 0 1em;
+}
+    footer nav{
+        background-color: white;
+        height: 2.5em;
+        width: 80%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 8px;
+        margin: 0 auto 0;
+        position: relative;
+        top: -20px;
+    }
+        footer a{
+            text-decoration: none;
+            color: #232323;
+            font-size: .5em;
+        }
+        footer a:hover{
+            color: #e99e00;
+        }
+        footer .dot{
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            background-color: #d3d3d3;
+        }
+    footer .footer-articles{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 1em;
+
+    }
+        .articles-layout{
+            display: flex;
+            justify-content: space-between;
+        }
+
+            footer .footer-articles article{
+                width: 45%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                color: #d3d3d3;
+                font-size: .5em;
+            }
+/* footer .footer-articles article:nth-child(odd){
+    padding: 0 2em 0 0;
+}
+footer .footer-articles article:nth-child(even){
+    padding: 0 0 0 2em;
+} */
+footer .footer-articles article img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;   
+}
+
+footer .social{
+    display: flex;
+   justify-content: center;
+   border-top: 2px solid #818181;
+    margin: 0 1em;
+    padding: 1.5em;
+}
+
+footer .social a{
+    display: block;
+    width: 30px;
+}
+footer .social a:first-child{ /* pour l'icone facebook qui est etroite */
+    width: 15px;
+}
+footer .social a:nth-child(odd){ /* cible l'icone twitter */
+    margin: 0 6em;
+}
+.social a img{
+    width: 100%;
+}
+footer .copyright{
+    font-size: .7em;
+    text-align: center;
+    color:#d3d3d3;
+}
+
+@media screen and (min-width: 600px) {
+    .header-layout {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }    
+        .header-layout .logo{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;        
+        }
+            .logo p{
+                margin: 1em 0 0;
+            }
+        .header-layout .welcome{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 40%;
+        }
+            .welcome .morning{
+                text-align: end;
+            }
+            .morning p{
+                margin: 0;
+            }
+            .welcome nav{
+                /* width: 50%; */
+                display: flex;
+                justify-content: space-between;
+            }
+    .main-layout{
+        max-width: 800px;
+        margin: 0 auto;
+    }
+        .banniere img{
+            height: 250px;
+        }
+        .articles{
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 3em;
+        }
+        .articles article{
+            width: 41%;
+            margin: 0 1.9em;
+        }
+    .footer-layout{
+        max-width: 800px;
+        margin: 0 auto;
+    }
+        footer nav{
+            width: 50%;
+        }
+        footer a{
+            font-size: .6em;
+            justify-content: space-around;
+        }
+    footer .footer-articles{
+        flex-direction: row;
+    }
+    .articles-layout:nth-child(odd){
+        margin: 0 2em 0 0;
+    }
+}
